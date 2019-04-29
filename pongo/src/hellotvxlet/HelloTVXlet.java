@@ -11,6 +11,8 @@ import org.havi.ui.HVisible;
 public class HelloTVXlet implements Xlet {
 
   HScene scene;
+  int points_player = 0;
+  int points_enemy = 0;
   
     public HelloTVXlet() {
         
@@ -20,9 +22,18 @@ public class HelloTVXlet implements Xlet {
       //720 x 576
       //x,y,width,heigth in px
      scene= HSceneFactory.getInstance().getDefaultHScene();
-     HStaticText question= new HStaticText("POINTS", 150, 100, 400, 100);
-     question.setBackgroundMode(HVisible.BACKGROUND_FILL);
-     question.setBackground(Color.BLUE);
+     scene.setBackgroundMode(HVisible.BACKGROUND_FILL);
+     scene.setBackground(Color.BLACK);
+     
+     HStaticText score_player= new HStaticText(Integer.toString(points_player), 200, 10, 50, 50);  
+     
+     HStaticText score_enemy= new HStaticText(Integer.toString(points_enemy), 470, 10, 50, 50);
+    
+     
+     scene.add(score_player);
+     scene.add(score_enemy);
+     scene.validate();
+     scene.setVisible(true);
     }
 
     public void startXlet() {
