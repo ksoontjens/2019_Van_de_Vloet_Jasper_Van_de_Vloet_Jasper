@@ -5,27 +5,28 @@
 
 package hellotvxlet;
 
-import java.awt.Color;
 import java.awt.Graphics;
-import java.awt.Image;
-import java.awt.MediaTracker;
 import org.dvb.ui.DVBColor;
 import org.havi.ui.HComponent;
-import org.havi.ui.HStaticText;
-import org.havi.ui.HVisible;
 
 /**
  *
  * @author student
  */
 public class Player extends HComponent {
-    public int pos_x = 10;
-    public int pos_y = (576/2) - 50;
+    
     protected int paddle_width = 10;
     protected int paddle_height= 100;
+    //protected int screen_width;
+    //protected int screen_height;
+    
+    public int pos_x;
+    public int pos_y;
     
     public Player(int x,int y, int h, int w){
         this.setBounds(x,y, h, w); 
+        pos_x = x;
+        pos_y = y;
     }
     
     // Paint methode overschrijven
