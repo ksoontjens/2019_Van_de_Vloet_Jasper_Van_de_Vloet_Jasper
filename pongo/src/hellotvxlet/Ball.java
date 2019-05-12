@@ -46,7 +46,7 @@ public class Ball extends HComponent{
             pos_x --;
         }
         
-        if(pos_x == getWidth()-radius){
+        if(pos_x == /*getWidth()*/ 200-radius){
             direction_x = false;
         }
         

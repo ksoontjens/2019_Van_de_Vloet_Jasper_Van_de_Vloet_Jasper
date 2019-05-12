@@ -36,7 +36,7 @@ public class HelloTVXlet implements Xlet, UserEventListener {
      //x,y,width,heigth in px
         
      player = new Player (20,0, field_width, field_height);
-     ball = new Ball (0,0, field_width, field_height);
+     ball = new Ball (0,55, field_width, field_height);
      
      scene = HSceneFactory.getInstance().getDefaultHScene();
      scene.setBackgroundMode(HVisible.BACKGROUND_FILL);
@@ -101,7 +101,7 @@ public class HelloTVXlet implements Xlet, UserEventListener {
     
     public void checkCollision(){
         if(ball.pos_x - ball.radius == player.pos_x){
-           if(ball.pos_y >= player.pos_y - 50   ){
+           if(ball.pos_y >= player.pos_y - 55 &&  ball.pos_y <= player.pos_y+50){
                 ball.direction_x = true;
             }
         }
