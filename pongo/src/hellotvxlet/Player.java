@@ -5,6 +5,7 @@
 
 package hellotvxlet;
 
+import java.awt.Color;
 import java.awt.Graphics;
 import org.dvb.ui.DVBColor;
 import org.havi.ui.HComponent;
@@ -22,6 +23,7 @@ public class Player extends HComponent {
     
     public int pos_x;
     public int pos_y;
+    public int score = 0;
     
     public Player(int x,int y, int h, int w){
         this.setBounds(x,y, h, w); 
@@ -34,4 +36,5 @@ public class Player extends HComponent {
         g.setColor(new DVBColor(255,255,255,255)); 
         g.fillRect(pos_x, pos_y, paddle_width , paddle_height);
     } 
+   
 }
