@@ -23,8 +23,7 @@ public class Score extends HComponent{
     public Score(int x,int y, int h, int w){
         this.setBounds(x,y, h, w); 
     }
-    
-    // Paint methode overschrijven
+  
     public void paint ( Graphics g ) {
         g.setColor(Color.WHITE); 
         label = Integer.toString(player1) + "                                   " + Integer.toString(player2);

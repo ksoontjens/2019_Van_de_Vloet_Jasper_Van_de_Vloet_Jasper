@@ -5,7 +5,6 @@
 
 package hellotvxlet;
 
-import java.awt.Color;
 import java.awt.Graphics;
 import org.dvb.ui.DVBColor;
 import org.havi.ui.HComponent;
@@ -18,8 +17,6 @@ public class Player extends HComponent {
     
     protected int paddle_width = 10;
     protected int paddle_height= 100;
-    //protected int screen_width;
-    //protected int screen_height;
     
     public int pos_x;
     public int pos_y;
@@ -31,7 +28,6 @@ public class Player extends HComponent {
         pos_y = y;
     }
     
-    // Paint methode overschrijven
     public void paint ( Graphics g ) {
         g.setColor(new DVBColor(255,255,255,255)); 
         g.fillRect(pos_x, pos_y, paddle_width , paddle_height);
